@@ -88,7 +88,7 @@ int main()
     int a = 0;
     while (1) {
         x3 = recursive(a);
-        printf("value of %d is %d", a,x3);
+        // printf("value of %d is %d", a,x3);
         a = a + 1;
     }
 

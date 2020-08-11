@@ -55,10 +55,10 @@ module riscv_top
 
 
    
-   localparam MEM0_INIT = "Z:/riscv-sv/c/counter/build/counter_mem0.bin";
-   localparam MEM1_INIT = "Z:/riscv-sv/c/counter/build/counter_mem1.bin";
-   localparam MEM2_INIT = "Z:/riscv-sv/c/counter/build/counter_mem2.bin";
-   localparam MEM3_INIT = "Z:/riscv-sv/c/counter/build/counter_mem3.bin";
+   localparam MEM0_INIT = "Z:/riscv_sv/c/counter/build/counter_mem0.bin";
+   localparam MEM1_INIT = "Z:/riscv_sv/c/counter/build/counter_mem1.bin";
+   localparam MEM2_INIT = "Z:/riscv_sv/c/counter/build/counter_mem2.bin";
+   localparam MEM3_INIT = "Z:/riscv_sv/c/counter/build/counter_mem3.bin";
 
    (* mark_debug = "true" *) logic [31:0] reg_3;
    
