@@ -1,0 +1,96 @@
+[*]
+[*] GTKWave Analyzer v3.3.98 (w)1999-2019 BSI
+[*] Wed Aug  7 05:56:42 2019
+[*]
+[dumpfile] "/home/qubits/proj/riscv-sv/sim/logs/top.fst"
+[dumpfile_mtime] "Wed Aug  7 05:52:15 2019"
+[dumpfile_size] 35162
+[savefile] "/home/qubits/proj/riscv-sv/sim/showsigs.gtkw"
+[timestart] 0
+[size] 1870 1016
+[pos] -1 -1
+*-5.000000 54 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.riscv_top.
+[sst_width] 261
+[signals_width] 246
+[sst_expanded] 1
+[sst_vpaned_height] 288
+@201
+----DBUS---
+@28
+TOP.riscv_top.riscv_0p.clk
+@22
+TOP.riscv_top.riscv_0p.dBus_cmd_payload_addr[31:0]
+TOP.riscv_top.riscv_0p.dBus_cmd_payload_data[31:0]
+TOP.riscv_top.riscv_0p.dBus_cmd_payload_size[3:0]
+@28
+TOP.riscv_top.riscv_0p.dBus_cmd_payload_wr
+TOP.riscv_top.riscv_0p.dBus_cmd_ready
+TOP.riscv_top.riscv_0p.dBus_cmd_valid
+@22
+TOP.riscv_top.riscv_0p.dBus_rsp_data[31:0]
+@28
+TOP.riscv_top.riscv_0p.dBus_rsp_error
+TOP.riscv_top.riscv_0p.dBus_rsp_valid
+@200
+----REGS---
+@22
+TOP.riscv_top.riscv_0p.xregs(0)[31:0]
+TOP.riscv_top.riscv_0p.xregs(1)[31:0]
+TOP.riscv_top.riscv_0p.xregs(2)[31:0]
+TOP.riscv_top.riscv_0p.xregs(3)[31:0]
+TOP.riscv_top.riscv_0p.xregs(4)[31:0]
+TOP.riscv_top.riscv_0p.xregs(5)[31:0]
+TOP.riscv_top.riscv_0p.xregs(6)[31:0]
+TOP.riscv_top.riscv_0p.xregs(7)[31:0]
+TOP.riscv_top.riscv_0p.xregs(8)[31:0]
+TOP.riscv_top.riscv_0p.xregs(9)[31:0]
+TOP.riscv_top.riscv_0p.xregs(10)[31:0]
+TOP.riscv_top.riscv_0p.xregs(11)[31:0]
+TOP.riscv_top.riscv_0p.xregs(12)[31:0]
+TOP.riscv_top.riscv_0p.xregs(13)[31:0]
+TOP.riscv_top.riscv_0p.xregs(14)[31:0]
+TOP.riscv_top.riscv_0p.xregs(15)[31:0]
+TOP.riscv_top.riscv_0p.xregs(16)[31:0]
+TOP.riscv_top.riscv_0p.xregs(17)[31:0]
+TOP.riscv_top.riscv_0p.xregs(18)[31:0]
+TOP.riscv_top.riscv_0p.xregs(19)[31:0]
+TOP.riscv_top.riscv_0p.xregs(20)[31:0]
+TOP.riscv_top.riscv_0p.xregs(21)[31:0]
+TOP.riscv_top.riscv_0p.xregs(22)[31:0]
+TOP.riscv_top.riscv_0p.xregs(23)[31:0]
+TOP.riscv_top.riscv_0p.xregs(24)[31:0]
+TOP.riscv_top.riscv_0p.xregs(25)[31:0]
+TOP.riscv_top.riscv_0p.xregs(26)[31:0]
+TOP.riscv_top.riscv_0p.xregs(27)[31:0]
+TOP.riscv_top.riscv_0p.xregs(28)[31:0]
+TOP.riscv_top.riscv_0p.xregs(29)[31:0]
+TOP.riscv_top.riscv_0p.xregs(30)[31:0]
+TOP.riscv_top.riscv_0p.xregs(31)[31:0]
+@200
+----IBUS---
+@28
+TOP.riscv_top.riscv_0p.clk
+TOP.riscv_top.riscv_0p.rstf
+@22
+TOP.riscv_top.riscv_0p.iBus_cmd_payload_pc[31:0]
+@28
+TOP.riscv_top.riscv_0p.iBus_cmd_ready
+TOP.riscv_top.riscv_0p.iBus_cmd_valid
+TOP.riscv_top.riscv_0p.iBus_rsp_err
+@22
+TOP.riscv_top.riscv_0p.iBus_rsp_instr[31:0]
+@28
+TOP.riscv_top.riscv_0p.iBus_rsp_ready
+@200
+----op code---
+@28
+TOP.riscv_top.riscv_0p.op_alu_imm
+TOP.riscv_top.riscv_0p.op_alu_reg
+TOP.riscv_top.riscv_0p.op_branch
+TOP.riscv_top.riscv_0p.op_is_imm
+TOP.riscv_top.riscv_0p.op_load
+TOP.riscv_top.riscv_0p.op_store
+[pattern_trace] 1
+[pattern_trace] 0

@@ -1,0 +1,97 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+imem             0x0000000000000000 0x0000000000006400 r
+dmem             0x0000000000006400 0x0000000000001800 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+LOAD /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+                0x0000000000000000                START_LOC = 0x0
+                0x0000000000006400                IMEM_LEN = 0x6400
+                0x0000000000001800                DMEM_LEN = 0x1800
+                0x0000000000000000                . = 0x0
+
+.crt_section    0x0000000000000000      0x1f0
+                0x0000000000000000                . = ALIGN (0x4)
+ *crt.o(.text*)
+ *(.init.text*)
+ .init.text     0x0000000000000000       0xe0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+                0x0000000000000000                _start
+                0x00000000000000cc                __halt_main
+ *(.text*)
+ .text          0x00000000000000e0        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .text          0x00000000000000e0      0x110 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+                0x00000000000000e0                multiply
+                0x000000000000013c                recursive
+                0x00000000000001a4                main
+                0x00000000000001f0                __imem_size = SIZEOF (.crt_section)
+
+.rodata         0x00000000000001f0       0x12
+ .rodata        0x00000000000001f0       0x12 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.rela.dyn       0x0000000000000204        0x0
+ .rela.text     0x0000000000000204        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.var_space      0x0000000000006400        0x0
+                0x0000000000006400                . = ALIGN (0x4)
+ *(.sdata .sdata.*)
+ *(.data .data.*)
+ .data          0x0000000000006400        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .data          0x0000000000006400        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+ *(.sbss*)
+
+.will_zero      0x0000000000006400        0x0
+                0x0000000000006400                . = ALIGN (0x4)
+                0x0000000000006400                __bss_vma_start = .
+ *(.bss*)
+ .bss           0x0000000000006400        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .bss           0x0000000000006400        0x0 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+ *(COMMON)
+                0x0000000000006400                . = ALIGN (0x4)
+                0x0000000000006400                __bss_vma_end = .
+                0x0000000000006400                . = ALIGN (0x4)
+                0x0000000000006400                __dedicated_mem_end = .
+                0x0000000000007bfc                __sp_start = ((ORIGIN (dmem) + LENGTH (dmem)) - 0x4)
+                0x00000000000017fc                __stack_size = (__sp_start - __dedicated_mem_end)
+OUTPUT(build/counter.o elf32-littleriscv)
+
+.riscv.attributes
+                0x0000000000000000       0x20
+ .riscv.attributes
+                0x0000000000000000       0x1e /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .riscv.attributes
+                0x000000000000001e       0x1c /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.comment        0x0000000000000000       0x12
+ .comment       0x0000000000000000       0x12 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+                                         0x13 (size before relaxing)
+
+.debug_line     0x0000000000000000      0x25c
+ .debug_line    0x0000000000000000      0x145 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .debug_line    0x0000000000000145      0x117 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.debug_info     0x0000000000000000      0x16d
+ .debug_info    0x0000000000000000       0x26 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .debug_info    0x0000000000000026      0x147 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.debug_abbrev   0x0000000000000000      0x106
+ .debug_abbrev  0x0000000000000000       0x14 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .debug_abbrev  0x0000000000000014       0xf2 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.debug_aranges  0x0000000000000000       0x40
+ .debug_aranges
+                0x0000000000000000       0x20 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .debug_aranges
+                0x0000000000000020       0x20 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+
+.debug_str      0x0000000000000000       0xdf
+ .debug_str     0x0000000000000000       0x4d /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//cc10H0du.o
+ .debug_str     0x000000000000004d       0x92 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
+                                         0xcd (size before relaxing)
+
+.debug_frame    0x0000000000000000       0x78
+ .debug_frame   0x0000000000000000       0x78 /var/folders/5w/bg_m5cp56bj2ghw1j1t0fgww0000gn/T//ccV3GcGp.o
